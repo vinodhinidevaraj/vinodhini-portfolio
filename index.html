@@ -5,19 +5,19 @@
     <title>Vinodhini Devaraj | Personal Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #f4f6f8, #fdf6f8);
+            background: linear-gradient(to bottom, #f4f6f8, #fefefe);
             color: #333;
         }
 
         header {
-            background: linear-gradient(135deg, #fbbd8b, #f78ca0, #b18fbf);
+            background: linear-gradient(90deg, #ffb347, #ffcc33);
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -27,7 +27,7 @@
         header p { margin-top: 10px; font-size: 18px; }
 
         nav {
-            background: linear-gradient(90deg, #f5a37c, #d187a5);
+            background-color: #ffffff;
             padding: 10px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -36,14 +36,11 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #fff;
+            color: #ff6f61;
             font-weight: bold;
             transition: 0.3s;
         }
-
-        nav a:hover {
-            color: #ffebcd;
-        }
+        nav a:hover { color: #8e44ad; }
 
         section {
             padding: 40px 20px;
@@ -51,40 +48,38 @@
             margin: auto;
         }
 
-        /* Swiper Styles */
-        .swiper { padding: 20px 0; }
-        .swiper-slide {
-            background: linear-gradient(135deg, #f9e4e4, #f6d6f5);
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            color: #333;
-        }
-
-        .swiper-slide h3 { color: #b85c7b; }
-        .swiper-slide ul { margin: 10px 0; }
-        .swiper-slide ul li { margin-bottom: 6px; }
-
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: linear-gradient(45deg, #fbbd8b, #f78ca0);
+            background-color: #8e44ad;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 10px;
-            transition: 0.3s;
         }
 
         .btn:hover {
-            background: linear-gradient(45deg, #b18fbf, #9e7bb0);
+            background-color: #732d91;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, #f5a37c, #d187a5);
+            background-color: #ffb347;
             color: white;
+        }
+
+        /* Carousel Cards */
+        .carousel-item .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            padding: 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .carousel-item .card h3 {
+            color: #ff6f61;
         }
     </style>
 </head>
@@ -93,7 +88,7 @@
 
 <header>
     <h1>Vinodhini Devaraj</h1>
-    <p>AI Enthusiast | Data Analyst | Lifelong Learner</p>
+    <p>AI Enthusiast | Prompt Engineer | Lifelong Learner</p>
 </header>
 
 <nav>
@@ -104,10 +99,10 @@
 </nav>
 
 <section id="about">
-    <div class="card">
+    <div class="card mb-4">
         <h2>About Me</h2>
         <p>
-            Hi, I'm Vinodhini. I am passionate about AI, prompt engineering, and continuous learning.
+            Hi, I'm Vinodhini Devaraj. I am passionate about AI, prompt engineering, and continuous learning.
             I enjoy exploring how AI tools like Claude and ChatGPT can enhance productivity and creativity.
         </p>
         <a href="https://www.linkedin.com/" target="_blank" class="btn">View My LinkedIn</a>
@@ -115,64 +110,60 @@
 </section>
 
 <section id="projects">
-    <h2 style="text-align:center; color:#0a66c2;">My Analysis Projects</h2>
-    
-    <!-- Swiper -->
-    <div class="swiper">
-        <div class="swiper-wrapper">
+    <h2 class="mb-4 text-center">Projects</h2>
+
+    <!-- Bootstrap Carousel -->
+    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
             <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <h3>Amazon Customer Behavior Analysis</h3>
-                <p>
-                    Conducted end-to-end exploratory and statistical analysis on Amazon Customer Survey data (602 observations).
-                    Used Python, statistical testing, regression modelling, and clustering techniques to uncover insights
-                    into customer satisfaction, purchase behaviour, and demographic trends.
-                </p>
-                <ul>
-                    <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Scikit-learn</li>
-                    <li><strong>Key Insight:</strong> Rating Accuracy strongly impacts Shopping Satisfaction (r = 0.514)</li>
-                    <li><strong>Model:</strong> Linear Regression (R² = 0.264, p < 0.001)</li>
-                    <li><strong>Segmentation:</strong> K-Means clustering identified customer behaviour groups</li>
-                </ul>
-                <a href="#" class="btn">View Full Analysis</a>
+            <div class="carousel-item active">
+                <div class="card">
+                    <h3>Amazon Customer Behavior Analysis</h3>
+                    <p>
+                        Conducted end-to-end exploratory and statistical analysis on Amazon Customer Survey data (602 observations).
+                        Used Python, statistical testing, regression modelling, and clustering techniques to uncover insights
+                        into customer satisfaction, purchase behaviour, and demographic trends.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Scikit-learn</li>
+                        <li><strong>Key Insight:</strong> Rating Accuracy strongly impacts Shopping Satisfaction (r = 0.514)</li>
+                        <li><strong>Model:</strong> Linear Regression (R² = 0.264, p < 0.001)</li>
+                        <li><strong>Segmentation:</strong> K-Means clustering identified customer behaviour groups</li>
+                    </ul>
+                    <a href="#" class="btn mt-2">View Full Analysis</a>
+                </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <h3>2021 Tokyo Olympics Analysis</h3>
-                <p>
-                    Analyzed Olympic performance data using SQL and Python to identify medal trends, country performance, and athlete statistics.
-                </p>
-                <ul>
-                    <li><strong>Tools Used:</strong> SQL, Python, Tableau</li>
-                    <li><strong>Key Insight:</strong> Countries with higher investment in training had better medal efficiency</li>
-                </ul>
-                <a href="#" class="btn">View Full Analysis</a>
+            <div class="carousel-item">
+                <div class="card">
+                    <h3>Financial Dashboard</h3>
+                    <p>
+                        Developed interactive financial dashboards in Power BI with advanced metrics and modelling.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><strong>Tools Used:</strong> Power BI, DAX, Excel</li>
+                        <li><strong>Key Insight:</strong> Visualized revenue trends and KPIs across departments</li>
+                    </ul>
+                    <a href="#" class="btn mt-2">View Full Analysis</a>
+                </div>
             </div>
 
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-                <h3>Financial Dashboard</h3>
-                <p>
-                    Built interactive financial dashboards in Power BI for real-time KPI tracking, reporting, and strategic decision-making.
-                </p>
-                <ul>
-                    <li><strong>Tools Used:</strong> Power BI, DAX, M Query</li>
-                    <li><strong>Key Insight:</strong> Visualizations helped leadership monitor revenue trends effectively</li>
-                </ul>
-                <a href="#" class="btn">View Full Dashboard</a>
-            </div>
         </div>
 
-        <!-- Swiper navigation -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
     </div>
 </section>
 
 <section id="blog">
-    <div class="card">
+    <div class="card mb-4">
         <h2>Latest Blog Post</h2>
         <h3>My Journey into AI Fluency</h3>
         <p>
@@ -181,34 +172,30 @@
         </p>
         <a href="#" class="btn">Read More</a>
     </div>
+
+    <div class="card mb-4">
+        <h3>Why Prompt Engineering Matters</h3>
+        <p>
+            Prompt engineering is not about tricks — it's about clarity, context, and collaboration.
+            Here’s what I learned while exploring Claude and AI systems.
+        </p>
+        <a href="#" class="btn">Read More</a>
+    </div>
 </section>
 
 <section id="contact">
     <div class="card">
         <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>Email: vinodeva003@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vinodhinidevaraj/" target="_blank">https://www.linkedin.com/in/vinodhinidevaraj/</a></p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Vinodhini | Personal Blog</p>
+    <p>© 2026 Vinodhini Devaraj | Personal Blog</p>
 </footer>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    spaceBetween: 30,
-    slidesPerView: 1,
-  });
-</script>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
