@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <title>Vinodhini | Personal Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
+            background: linear-gradient(to bottom, #f4f6f8, #e0f7fa);
             color: #333;
         }
 
@@ -20,15 +23,8 @@
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
+        header h1 { margin: 0; font-size: 40px; }
+        header p { margin-top: 10px; font-size: 18px; }
 
         nav {
             background-color: #ffffff;
@@ -46,16 +42,31 @@
 
         section {
             padding: 40px 20px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
         }
 
-        .card {
-            background: white;
+        /* Swiper Styles */
+        .swiper { padding: 20px 0; }
+        .swiper-slide {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            color: #333;
+        }
+
+        .swiper-slide h3 { color: #0a66c2; }
+        .swiper-slide ul { margin: 10px 0; }
+        .swiper-slide ul li { margin-bottom: 6px; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
         }
 
         footer {
@@ -64,19 +75,8 @@
             background-color: #0a66c2;
             color: white;
         }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0a66c2;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -103,27 +103,61 @@
 </section>
 
 <section id="projects">
-    <div class="card">
-        <h2>Projects</h2>
-        
-        <h3>Amazon Customer Behavior Analysis</h3>
-        <p>
-            Conducted end-to-end exploratory and statistical analysis on Amazon Customer Survey data (602 observations).
-            Used Python, statistical testing, regression modelling, and clustering techniques to uncover insights
-            into customer satisfaction, purchase behaviour, and demographic trends.
-        </p>
+    <h2 style="text-align:center; color:#0a66c2;">My Analysis Projects</h2>
+    
+    <!-- Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <h3>Amazon Customer Behavior Analysis</h3>
+                <p>
+                    Conducted end-to-end exploratory and statistical analysis on Amazon Customer Survey data (602 observations).
+                    Used Python, statistical testing, regression modelling, and clustering techniques to uncover insights
+                    into customer satisfaction, purchase behaviour, and demographic trends.
+                </p>
+                <ul>
+                    <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Scikit-learn</li>
+                    <li><strong>Key Insight:</strong> Rating Accuracy strongly impacts Shopping Satisfaction (r = 0.514)</li>
+                    <li><strong>Model:</strong> Linear Regression (R² = 0.264, p < 0.001)</li>
+                    <li><strong>Segmentation:</strong> K-Means clustering identified customer behaviour groups</li>
+                </ul>
+                <a href="#" class="btn">View Full Analysis</a>
+            </div>
 
-        <ul>
-            <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Scikit-learn</li>
-            <li><strong>Key Insight:</strong> Rating Accuracy strongly impacts Shopping Satisfaction (r = 0.514)</li>
-            <li><strong>Model:</strong> Linear Regression (R² = 0.264, p < 0.001)</li>
-            <li><strong>Segmentation:</strong> K-Means clustering identified customer behaviour groups</li>
-        </ul>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <h3>2021 Tokyo Olympics Analysis</h3>
+                <p>
+                    Analyzed Olympic performance data using SQL and Python to identify medal trends, country performance, and athlete statistics.
+                </p>
+                <ul>
+                    <li><strong>Tools Used:</strong> SQL, Python, Tableau</li>
+                    <li><strong>Key Insight:</strong> Countries with higher investment in training had better medal efficiency</li>
+                </ul>
+                <a href="#" class="btn">View Full Analysis</a>
+            </div>
 
-        <a href="#" class="btn">View Full Analysis</a>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <h3>Financial Dashboard</h3>
+                <p>
+                    Built interactive financial dashboards in Power BI for real-time KPI tracking, reporting, and strategic decision-making.
+                </p>
+                <ul>
+                    <li><strong>Tools Used:</strong> Power BI, DAX, M Query</li>
+                    <li><strong>Key Insight:</strong> Visualizations helped leadership monitor revenue trends effectively</li>
+                </ul>
+                <a href="#" class="btn">View Full Dashboard</a>
+            </div>
+        </div>
+
+        <!-- Swiper navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
-
 
 <section id="blog">
     <div class="card">
@@ -132,15 +166,6 @@
         <p>
             In this post, I share my experience learning about AI collaboration, prompt engineering,
             and how understanding the 4D framework changed the way I work with AI.
-        </p>
-        <a href="#" class="btn">Read More</a>
-    </div>
-
-    <div class="card">
-        <h3>Why Prompt Engineering Matters</h3>
-        <p>
-            Prompt engineering is not about tricks — it's about clarity, context, and collaboration.
-            Here’s what I learned while exploring Claude and AI systems.
         </p>
         <a href="#" class="btn">Read More</a>
     </div>
@@ -158,6 +183,17 @@
     <p>© 2026 Vinodhini | Personal Blog</p>
 </footer>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    spaceBetween: 30,
+    slidesPerView: 1,
+  });
+</script>
+
 </body>
 </html>
-
