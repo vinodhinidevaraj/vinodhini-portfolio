@@ -5,42 +5,52 @@
     <title>Vinodhini Devaraj | Personal Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS for easy styling (optional for future) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #f4f6f8, #fefefe);
-            color: #333;
+            background: linear-gradient(to bottom, #f9f5f7, #fffaf5); /* soft pastel background */
+            color: #444;
         }
 
         header {
-            background: linear-gradient(90deg, #ffb347, #ffcc33);
-            color: white;
+            background: linear-gradient(90deg, #ffd6e0, #ffe4f0, #e6d3ff); /* pastel gradient */
+            color: #333;
             padding: 40px 20px;
             text-align: center;
         }
 
-        header h1 { margin: 0; font-size: 40px; }
-        header p { margin-top: 10px; font-size: 18px; }
+        header h1 { 
+            margin: 0; 
+            font-size: 40px; 
+            color: #5e3c6a; /* soft dark purple for text */
+        }
+        header p { 
+            margin-top: 10px; 
+            font-size: 18px; 
+            color: #5e3c6a;
+        }
 
         nav {
-            background-color: #ffffff;
+            background-color: #fff7f8; /* very light pink */
             padding: 10px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #ff6f61;
+            color: #a77abf; /* pastel purple links */
             font-weight: bold;
             transition: 0.3s;
         }
-        nav a:hover { color: #8e44ad; }
+        nav a:hover {
+            color: #ff8fa3; /* pastel pink on hover */
+        }
 
         section {
             padding: 40px 20px;
@@ -48,42 +58,35 @@
             margin: auto;
         }
 
+        .card {
+            background: #fffdfd; /* soft white */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #8e44ad;
-            color: white;
+            background-color: #ffb3b3; /* pastel pink button */
+            color: #5e3c6a; /* pastel purple text */
             text-decoration: none;
             border-radius: 5px;
             margin-top: 10px;
         }
-
         .btn:hover {
-            background-color: #732d91;
+            background-color: #ffd6d6; /* lighter pink hover */
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #ffb347;
-            color: white;
-        }
-
-        /* Carousel Cards */
-        .carousel-item .card {
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            padding: 20px;
-            background: #ffffff;
-            text-align: center;
-        }
-
-        .carousel-item .card h3 {
-            color: #ff6f61;
+            background-color: #e6d3ff; /* pastel purple footer */
+            color: #5e3c6a;
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -99,85 +102,42 @@
 </nav>
 
 <section id="about">
-    <div class="card mb-4">
+    <div class="card">
         <h2>About Me</h2>
         <p>
-            Hi, I'm Vinodhini Devaraj. I am passionate about AI, prompt engineering, and continuous learning.
+            Hi, I'm Vinodhini. I am passionate about AI, prompt engineering, and continuous learning.
             I enjoy exploring how AI tools like Claude and ChatGPT can enhance productivity and creativity.
         </p>
-        <a href="https://www.linkedin.com/" target="_blank" class="btn">View My LinkedIn</a>
+        <a href="https://www.linkedin.com/in/vinodhini-devaraj3/" target="_blank" class="btn">View My LinkedIn</a>
     </div>
 </section>
 
 <section id="projects">
-    <h2 class="mb-4 text-center">Projects</h2>
-
-    <!-- Bootstrap Carousel -->
-    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="card">
-                    <h3>Amazon Customer Behavior Analysis</h3>
-                    <p>
-                        Conducted end-to-end exploratory and statistical analysis on Amazon Customer Survey data (602 observations).
-                        Used Python, statistical testing, regression modelling, and clustering techniques to uncover insights
-                        into customer satisfaction, purchase behaviour, and demographic trends.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Scikit-learn</li>
-                        <li><strong>Key Insight:</strong> Rating Accuracy strongly impacts Shopping Satisfaction (r = 0.514)</li>
-                        <li><strong>Model:</strong> Linear Regression (R² = 0.264, p < 0.001)</li>
-                        <li><strong>Segmentation:</strong> K-Means clustering identified customer behaviour groups</li>
-                    </ul>
-                    <a href="#" class="btn mt-2">View Full Analysis</a>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="card">
-                    <h3>Financial Dashboard</h3>
-                    <p>
-                        Developed interactive financial dashboards in Power BI with advanced metrics and modelling.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li><strong>Tools Used:</strong> Power BI, DAX, Excel</li>
-                        <li><strong>Key Insight:</strong> Visualized revenue trends and KPIs across departments</li>
-                    </ul>
-                    <a href="#" class="btn mt-2">View Full Analysis</a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
-        </button>
+    <div class="card">
+        <h2>Projects</h2>
+        <h3>Amazon Customer Behavior Analysis</h3>
+        <p>
+            Conducted end-to-end exploratory and statistical analysis on Amazon Customer Survey data (602 observations).
+            Used Python, statistical testing, regression modelling, and clustering techniques to uncover insights
+            into customer satisfaction, purchase behaviour, and demographic trends.
+        </p>
+        <ul>
+            <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Scikit-learn</li>
+            <li><strong>Key Insight:</strong> Rating Accuracy strongly impacts Shopping Satisfaction (r = 0.514)</li>
+            <li><strong>Model:</strong> Linear Regression (R² = 0.264, p < 0.001)</li>
+            <li><strong>Segmentation:</strong> K-Means clustering identified customer behaviour groups</li>
+        </ul>
+        <a href="#" class="btn">View Full Analysis</a>
     </div>
 </section>
 
 <section id="blog">
-    <div class="card mb-4">
+    <div class="card">
         <h2>Latest Blog Post</h2>
         <h3>My Journey into AI Fluency</h3>
         <p>
             In this post, I share my experience learning about AI collaboration, prompt engineering,
             and how understanding the 4D framework changed the way I work with AI.
-        </p>
-        <a href="#" class="btn">Read More</a>
-    </div>
-
-    <div class="card mb-4">
-        <h3>Why Prompt Engineering Matters</h3>
-        <p>
-            Prompt engineering is not about tricks — it's about clarity, context, and collaboration.
-            Here’s what I learned while exploring Claude and AI systems.
         </p>
         <a href="#" class="btn">Read More</a>
     </div>
@@ -187,7 +147,7 @@
     <div class="card">
         <h2>Contact Me</h2>
         <p>Email: vinodeva003@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/vinodhinidevaraj/" target="_blank">https://www.linkedin.com/in/vinodhinidevaraj/</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vinodhini-devaraj3/" target="_blank">https://www.linkedin.com/in/vinodhini-devaraj3/</a></p>
     </div>
 </section>
 
@@ -195,7 +155,5 @@
     <p>© 2026 Vinodhini Devaraj | Personal Blog</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
